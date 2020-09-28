@@ -1,6 +1,6 @@
-# Comparison of `mice`'s formula and predictorMatrix interface for interactions
+# Comparison of `mice`'s `formula` and `predictorMatrix` interface for interactions
 
-A recent [Master's project](https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=1234&context=cph_etds) reported different results when specifying an imputation model with interaction using `mice`'s `predictorMatrix` and `formulas` arguments, claiming that using `predictorMatrix` results in more precise estimates. This is surprising because in theory both options were designed to result in equivalent models. The code in this folder revisits the code published as part of the Master's thesis and investigates the reasons for a difference in results.
+A recent [Master's project](https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=1234&context=cph_etds) reported different results when specifying an imputation model with interaction using `mice`'s `predictorMatrix` and `formulas` arguments, claiming that using `predictorMatrix` results in more precise estimates. This is surprising because in theory both options [were designed to result in equivalent models](https://github.com/amices/mice/issues/257). The code in this folder revisits the code published as part of the Master's thesis and investigates the reasons for a difference in results.
 
 ## Findings 
 
@@ -20,7 +20,10 @@ myPredMat
 
 After correcting the `predictMatrix`, both interfaces provided identical results.
 
-
+## Reproduced Figures 2c and 3c
+![](xz_by_method_formula.png)
+![](xz_by_method_predict_mat.png)
+![](xz_by_method_predict_mat2.png)
 
 ## File structure
 
