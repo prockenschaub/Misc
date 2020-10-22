@@ -20,16 +20,16 @@ each case.
 MICE represents this uncertainty by creating more than one imputed
 datasets by randomly drawing from our imputation model. For example, if
 you use a linear regression ![y \\sim N(\\beta X,
-\\sigma^2)](https://latex.codecogs.com/png.latex?y%20%5Csim%20N%28%5Cbeta%20X%2C%20%5Csigma%5E2%29
+\\sigma^2)](http://chart.apis.google.com/chart?cht=tx&chl=y%20%5Csim%20N%28%5Cbeta%20X%2C%20%5Csigma%5E2%29
 "y \\sim N(\\beta X, \\sigma^2)") to impute a variable
-![y](https://latex.codecogs.com/png.latex?y "y") the regression line ![y
-= \\hat \\beta
-X](https://latex.codecogs.com/png.latex?y%20%3D%20%5Chat%20%5Cbeta%20X
+![y](http://chart.apis.google.com/chart?cht=tx&chl=y "y") the regression
+line ![y = \\hat \\beta
+X](http://chart.apis.google.com/chart?cht=tx&chl=y%20%3D%20%5Chat%20%5Cbeta%20X
 "y = \\hat \\beta X") is our best guess. However, there is both sampling
 variance in the fitted ![\\hat
-\\beta](https://latex.codecogs.com/png.latex?%5Chat%20%5Cbeta
+\\beta](http://chart.apis.google.com/chart?cht=tx&chl=%5Chat%20%5Cbeta
 "\\hat \\beta") as well as residual, unexplained variance
-![\\sigma^2](https://latex.codecogs.com/png.latex?%5Csigma%5E2
+![\\sigma^2](http://chart.apis.google.com/chart?cht=tx&chl=%5Csigma%5E2
 "\\sigma^2") around our regression line. MICE takes those uncertainties
 into accound by randomly drawing multiple samples that reflect that
 uncertainty.
@@ -259,9 +259,9 @@ head(imp.test[[1]])
 The default procedure for numeric data in *mice* is predictive mean
 matching (PMM), which has also been used in this example. Briefly, in
 PMM we predict a likely value for the missing variable and then chose
-randomly among the ![k](https://latex.codecogs.com/png.latex?k "k")
-closest observed values, usually called “donors” (a detailed description
-of PMM can be found
+randomly among the ![k](http://chart.apis.google.com/chart?cht=tx&chl=k
+"k") closest observed values, usually called “donors” (a detailed
+description of PMM can be found
 [here](https://stefvanbuuren.name/fimd/sec-pmm.html)).
 
 > If our method for correctly imputing the test set is working, we would
