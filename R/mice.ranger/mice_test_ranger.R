@@ -158,7 +158,8 @@ mice.impute.ranger <- function (y, ry, x, wy = NULL, ntree = 10, ...) {
   # Fit forest and determine donors for imputation
   fit <- ranger::ranger(x = xobs, y = yobs, num.trees = ntree)
   
-  nodes <- predict(object = fit, data = rbind(xobs, xmis), type = "terminalNodes")
+  nodes <- predict(object = fit, data = rbind(xobs, xmis), 
+                   type = "terminalNodes", predict.all = TRUE)
   nodes <- ranger::predictions(nodes)
   nodes_obs <- nodes[1:nrow(xobs), ]
   nodes_mis <- nodes[(nrow(xobs)+1):nrow(nodes), ]
